@@ -1,6 +1,10 @@
 def calculate_factorial(posINT):
+    #Factorials start with 1
     x = 1
+    
+    #A for loop is used to get the products of the range from 1 to the integer the user entered.
     for i in range(1, posINT + 1):
+        #Value of 'x' is updated after the products each iteration 
         x = i * x
         print(x)
     

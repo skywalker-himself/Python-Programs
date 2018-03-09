@@ -1,10 +1,11 @@
-import locale as lc
-
 def compareAreas(rect_firstLength, rect_firstWidth,rect_secondLength, rect_secondtWidth):
-    areaDifference = 0.0
+	
+    #Receives the dimensions from both rectangles, and calculates their areas. 
     areaRecA = rect_firstLength * rect_firstWidth
     areaRecB = rect_secondLength * rect_secondtWidth
 
+    #Compares the areas of the rectangles, and determines if one has a bigger area than the other, or if they have equal areas.
+    #The results are printed.
     if areaRecA == areaRecB:
         print("The areas of the rectangles are the same.")
     elif areaRecA > areaRecB:
@@ -16,13 +17,18 @@ def compareAreas(rect_firstLength, rect_firstWidth,rect_secondLength, rect_secon
 
 def main():
     choice = "y"
+
     while choice == "y":
-        rectLA = float(input("Enter the length of rectangle 'A': "))
-        rectWA= float(input("Enter the width of rectangle 'A': "))
-        rectLB = float(input("Enter the length of rectangle 'B': "))
-        rectWB = float(input("Enter the width of rectangle 'B': "))
-        areaDifference = compareAreas(rectLA, rectWA, rectLB, rectWB)
+		
+        rectLA = float(input("Enter the length of rectangle 'A': ")) #Gets the length of rectangle 'A' from the user
+        rectWA= float(input("Enter the width of rectangle 'A': ")) #Gets the width of rectangle 'A' from the user
+        rectLB = float(input("Enter the length of rectangle 'B': ")) #Gets the length of rectangle 'B' from the user
+        rectWB = float(input("Enter the width of rectangle 'B': ")) #Gets the width of rectangle 'B' from the user
+	
+        areaDifference = compareAreas(rectLA, rectWA, rectLB, rectWB) #passes the dimensions of the rectangles to the function compareAreas
+	
         print()
+	
         choice = str(input("Would you like to compare again?: (y/n)  "))
 
     

@@ -7,12 +7,17 @@ def calculate_factorial(posINT):
 def main():
     choice = "y"
     while choice == "y":
-        
-        posINT = int(input("Enter a positive integer: "))
-        functionCallVAR = calculate_factorial(posINT) #Variables can be passed into the function
+        #Prompts the user to input a positive integer
+        posINT = int(input("Enter a positive integer: ")) 
+
+        #Variables are passed to function calculate_factorial
+        functionCallVAR = calculate_factorial(posINT) 
 
         print()
+        
         choice = str(input("Would you like to run it again?: (y/n)  "))
+        
         print()
+        
 if __name__ == "__main__":
     main()
